@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/common/import.css" />
+</head>
+<body>
+    <div class="sub-title-wrap">
+        <div>
+            <a href="#" title="즐겨찾기" class="btn-bookmark hide">즐겨찾기</a>
+            <h2>프로그램 등록</h2>
+        </div>
+        <div>
+            <div class="btn-right-wrap">
+                <ul>
+                    <li><a href="#" title="초기화" class="btn-reset">초기화</a></li>
+                    <li><a href="#" title="조회" class="btn-search">조회</a></li>
+                    <li><a href="#" title="저장" class="btn-save">저장</a></li>
+                    <li><a href="#" title="삭제" class="btn-delete">삭제</a></li>
+                    <li><a href="#" title="다운" class="btn-down">다운</a></li>
+                    <li><a href="#" title="업로드" class="btn-upload">업로드</a></li>
+                    <li><a href="#" title="출력" class="btn-print">출력</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sub-search-wrap">
+    <section>
+        <div class="search-wrap">
+            <div class="sch-box calc100-45">
+                <dl>
+                    <dt class="w100"><label for="">프로그램 ID</label></dt>
+                    <dd class="w190">
+                        <label for="" class="hide">프로그램 ID</label>
+                        <input type="text" id="" name="" class="calc100-8" placeholder="placeholder"/>
+                        <a href="#" title="검색" class="btn-Mainsearch"></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="w100"><label for="">프로그램명</label></dt>
+                    <dd class="w180">
+                        <label for="" class="hide">프로그램명</label>
+                        <input type="text" id="" name="" class="w180">
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="w80"><label for="">메뉴구분</label></dt>
+                    <dd class="w170 pd-t5">
+                        <ul class="btn-chek">
+                            <li>
+                                <input type="checkbox" name="" id="chek_Menu" checked="checked" value="">
+                                <label for="chek_Menu" class="fs14">메뉴</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" id="chek_prom"  value="">
+                                <label for="chek_prom" class="fs14">프로그램</label>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="w100"><label for="">사용여부</label></dt>
+                    <dd class="w120">
+                        <label for="" class="hide">사용여부</label>
+                            <select id="" name="" class="w120">
+                                <option value="">전체</option>
+                                <option value="">사용</option>
+                                <option value="">미사용</option>
+                            </select> 
+                    </dd>
+                </dl>
+            </div>
+            <div class="sch-btn" style="display: none">
+                <ul>
+                    <li><a href="#" title="검색초기화" class="btn-reset">검색초기화</a></li>
+                    <li><a href="#" title="조회" class="btn-search">조회</a></li>
+                </ul>
+            </div>
+        </div>
+    </section> 
+</div>
+<div class="cont-tit">
+    <div class="fl pd-t8">
+        <h3>프로그램 리스트</h3>
+        <span class="total-txt">총<input type="text" class="total-num" value="4">건</span>
+    </div>
+    <div class="fr">
+        <ul class="btn-zoom-wrap">
+            <li><a href="#" title="확대" class="btn-plus"></a></li>
+            <li><a href="#" title="축소" class="btn-min"></a></li>
+        </ul>
+    </div>
+</div>
+<div class="table-wrap progm-reg">
+    <table class="table-type01">
+        <caption>출근/퇴근 누락 기록 테이블</caption>
+        <colgroup>
+            <col class="wp3">
+            <col class="wp10">
+            <col class="wp8">
+            <col class="wp6">
+            <col class="wp8">
+            <col class="wp7">
+            <col class="wp7">
+            <col class="wp15">
+            <col class="wp6">
+            <col class="wauto">
+            <col class="wp8">
+            <col class="wp10">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </th>
+                <th><span class="reaui-val"></span>프로그램ID</th>
+                <th>프로그램명</th>
+                <th>구분</th>
+                <th>상위메뉴ID</th>
+                <th>메뉴레벨</th>
+                <th>순번</th>
+                <th>메뉴경로</th>
+                <th>사용여부</th>
+                <th>비고</th>
+                <th>등록자</th>
+                <th>등록일시</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="" checked>
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td>P1234567</td>
+                <td>로그인</td>
+                <td>메뉴</td>
+                <td></td>
+                <td>0</td>
+                <td>00</td>
+                <td>홈 > 로그인</td>
+                <td>사용</td>
+                <td></td>
+                <td>admin</td>
+                <td>2020-08-10 15:28</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td>P1234567</td>
+                <td>회원가입</td>
+                <td>메뉴</td>
+                <td></td>
+                <td>0</td>
+                <td>01</td>
+                <td>홈 > 회원가입</td>
+                <td>사용</td>
+                <td></td>
+                <td>admin</td>
+                <td>2020-08-08 10:12</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td>P1234567</td>
+                <td>기준정보</td>
+                <td>프로그램</td>
+                <td></td>
+                <td>1</td>
+                <td>10</td>
+                <td>홈 > 기준정보</td>
+                <td>사용</td>
+                <td></td>
+                <td>amdin</td>
+                <td>2020-06-15 13:30</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td>P1234567</td>
+                <td>권한관리</td>
+                <td>메뉴</td>
+                <td></td>
+                <td>2</td>
+                <td>22</td>
+                <td>홈 > 기준정보 > 권한관리</td>
+                <td>미사용</td>
+                <td></td>
+                <td>admin</td>
+                <td>2020-06-15 13:28</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id=""  value="">
+                    <label for="" class="hide">체크박스</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

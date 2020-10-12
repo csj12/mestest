@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.csj.mestest.dao.system.HomeDAO">
+
+    <select id="GetUsers" resultType="com.csj.mestest.dto.system.UserDTO">
+        select * from users
+    </select>
+
+    <select id="GetMenus" resultType="com.csj.mestest.dto.system.MenuDTO">
+
+        with recursive menu (program_id,program_name,app_type,up_program_id,url,levels, path , ordr, CYCLE)
+            as(
+                select B.program_id 
+                    ,B.program_name 
+                    ,B.app_type
+                    ,B.up_program_id 
+                    ,COALESCE(B.url,'') URL
+                    ,b.level
+                    ,ARRAY[b.program_id::text]
+                    ,ARRAY[b.seq_no::text]
+                    ,false
+                from tsy0020h B
+                where b.use_yn ='Y'
+                and b.up_program_id = '0'
+                union all 
+                
+                select B.program_id 
+                    ,B.program_name 
+                    ,B.app_type
+                    ,B.up_program_id 
+                    ,COALESCE(B.url,'') URL
+                    ,b.level
+                    ,A.PATH ||b.program_id::text
+                    ,A.ORDR ||b.seq_no::text
+                    ,b.program_id = ANY(A.PATH)
+                from menu A ,tsy0020h B 
+                where b.up_program_id = a.program_id 
+                AND NOT CYCLE
+                AND b.use_yn ='Y' 
+            )
+            
+            SELECT  A.program_id
+                ,A.program_name
+                ,A.app_type
+                ,A.up_program_id
+                ,A.url
+                ,A.levels 
+                ,A.PATH
+                ,A.ORDR
+            from menu A
+            ORDER BY A.ordr;
+
+    </select>
+
+</mapper>

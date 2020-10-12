@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/*  LOGIN 페이지 CSS */
+.main-wrap{max-width: 1900px; min-width: 1500px; margin: 0 auto; height: 100%;}
+.main-wrap .main-header {padding: 25px 60px 12px;}
+.main-wrap .main-center{background: url(../../img/main/main-bg.jpg) no-repeat center; height: calc(100% - 62px); position: relative; margin: 0 40px; background-size: cover;}
+.main-wrap .main-center .login-box{position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: 467px; min-width: 467px; max-height: 500px; border-radius: 6px; background-color: rgba(255, 255, 255, 0.95); display: flex;}
+.main-wrap .main-center .login-left{padding: 50px 35px 38px 50px; width: 44%; display: inline-block; background: url(../../img/main/main-img.png)no-repeat 50% 97%; height: 435px; border-right: 1px solid #d9d9d9; margin: 30px 0;}
+.main-wrap .main-center .login-title{font-size: 32px; font-weight: 900; color: #325694; margin-bottom: 26px;}
+.main-wrap .main-center .login-sub-title{font-size: 15px; color: #8c8c8c; margin-bottom: 70px;}
+.login-right{width: 100%; display: inline-block; text-align: center;}
+.login-right h3{margin-bottom: 42px; font-size: 22px;}
+.login-right .align-login{padding: 60px 60px 0 70px;}
+.login-right .align-login .login-input input{padding: 15px 15px 16px 44px; font-size: 15px; width: 100%;}
+.login .login-input .user-id{background: url(../../img/main/main-ico-userid.png)no-repeat 7% 50%; }
+.login .login-input .user-pw{background: url(../../img/main/main-ico-userpw.png)no-repeat 7% 50%;}
+.login-right .align-login .login-chek{margin-top: 20px; margin-bottom: 15px;}
+.login-right .align-login .login-chek ul{display: flex; justify-content: space-between;}
+.login-right .align-login .login-chek .login-btn-reset{border: 1px solid #008ace; border-radius: 50px; background-color: #fff; padding: 6px 11px; text-align: center; color: #008ace;}
+.login-right .align-login .login-chek input[type="checkbox"]:before{width: 15px; height: 15px; margin-right: 6px; vertical-align: middle; line-height: 15px;}
+.login-right .align-login .login-chek label{color: #717171;}
+.login-btn-reset::before{content: ""; background: url(../../img/main/main-reset.png)no-repeat; width: 13px; height: 16px; display: inline-block; vertical-align: text-bottom; margin-right: 6px;}
+.login-btn button{background-color: #a6ce39; text-align: center; font-size:17px; padding: 14px 0; color: #fff; border: none; border-radius: 5px;margin-bottom: 30px; cursor: pointer; width: 100%;margin-top: 25px;}
+.mujin-txt {font-size: 13px; color: #bebebe; margin: 32px 0;}
+.login-title ul{display: flex; justify-content: center;}
+.login-title ul li:nth-child(2){border-left: 1px solid #f1f1f1; padding-left: 10px; color: #a6ce39;}
+
+/*footer*/
+.main-footer{padding: 22px 0 10px 0;}
+footer {z-index:555; width:100%; height:40px; text-align: center; color: #6d7a84; padding:13px 0 10px 0;}
