@@ -42,7 +42,7 @@ public class HomeController {
 			HttpSession session) throws Throwable {
 			
 		//ModelAndView vie = new ModelAndView("system/jsonView");
-		//vie.setViewName();
+		//vie.setViewName(); 
 		HashMap<String, Object> params = new HashMap<String, Object>();
 
         List<MenuDTO> list = new ArrayList<MenuDTO>();

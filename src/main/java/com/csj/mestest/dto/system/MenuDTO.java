@@ -11,6 +11,6 @@ public class MenuDTO {
     private String url;
     private String seq_no;
     private String levels;
-    private String PATH;
-    private String ordr;    
+    private String path;
+    private String ordr;     
 }
