@@ -3,7 +3,7 @@
 <mapper namespace="com.csj.mestest.dao.system.HomeDAO">
 
     <select id="GetUsers" resultType="com.csj.mestest.dto.system.UserDTO">
-        select * from users
+        select user_id, user_name from users
     </select>
 
     <select id="GetMenus" resultType="com.csj.mestest.dto.system.MenuDTO">
@@ -16,7 +16,7 @@
                     ,B.up_program_id 
                     ,COALESCE(B.url,'') URL
                     ,b.level
-                    ,ARRAY[b.program_id::text]
+                    ,ARRAY[b.program_id::text] 
                     ,ARRAY[b.seq_no::text]
                     ,false
                 from tsy0020h B
@@ -45,10 +45,10 @@
                 ,A.up_program_id
                 ,A.url
                 ,A.levels 
-                ,A.PATH
-                ,A.ORDR
+                ,A.path
+                ,A.ordr
             from menu A
-            ORDER BY A.ordr;
+            ORDER BY A.ordr
 
     </select>
 

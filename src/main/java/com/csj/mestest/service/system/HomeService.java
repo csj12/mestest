@@ -13,13 +13,13 @@ import org.springframework.stereotype.Service;
 public class HomeService {
 
     @Autowired
-    private HomeDAO homeDAO;
+    private HomeDAO homeDao;
 
     public List<UserDTO> GetUsers(){
-        return homeDAO.GetUsers();
+        return homeDao.GetUsers();
     } 
     
     public List<MenuDTO> GetMenus(){
-        return homeDAO.GetMenus();
+        return homeDao.GetMenus();
     }
 }
